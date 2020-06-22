@@ -10,12 +10,22 @@ body{
     margin: 0;
     line-height: 1.5;
     color: #373030;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 img {
     max-width: 100%;
     display: block;
 }
+
+p {
+    max-width: 500px;
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+@media (min-width: 320px) {
 
 h1 {
     font-size: 1.8rem;
@@ -26,8 +36,12 @@ h1 {
 }
 
 .container {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
+}
+
+.container,.container-header,header {
+    max-width: 1220px;
 }
 
 header {
@@ -64,26 +78,24 @@ nav {
 .nav{ 
     list-style: none;
     display: flex;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     background: #A46521;
     justify-content: center;
     align-items: center;
-    padding: .5em 0;
+    padding: .2em 0;
     font-weight: bold;
 }
 
-.nav__item:first-child   {
-    margin-right: auto;
-    margin-left: 2em;
+.nav__item {
+    margin-right: 2.5em;
 }
 
-.nav__item:last-child   {
-    margin-left: auto;
-    margin-right: .5em;
+.nav__item:last-child{
+    margin-right: 0;
 }
 
 .nav__link {
-    color: #fff;
+    color: #ffffffda;
     text-decoration: none;
     text-transform: capitalize;
 }
@@ -100,10 +112,12 @@ nav {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
+    font-weight: bold;
     margin-top: 1.5em;
     padding: 1em 2em;
     font-size: 1rem;
-    background: #ff8400cc;
+    background: #ff8400dc;
+    border-radius: 3px;
 }
 
 /********** main content *******/
@@ -117,14 +131,172 @@ nav {
     text-align: center;
     color: #914512;
     text-transform: capitalize;
+    font-family: 'Lalezar', cursive;
+    font-weight: 400;
+
 }
 
 .section__text {
-    font-size: 1.4rem;
-    padding: .3em 0 1em 0;
+    padding: .3em .5em 1em .5em;
+    color: #373030;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
+.testamonial__item {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.client-img {
+    border-radius: 100px;
+    margin: 0 auto;
+    margin-top: 1.5em;
+}
+
+.next-arrow-right {
+    fill: #333333;
+    width: 4.8rem;
+    height: 4.8rem;
+    /* padding: 1rem; */
+    position: absolute;
+    top: 1rem;
+    right: .8rem;
+}
+
+.client-name {
+    text-align: center;
+    color: #914512;
+    padding:  .4em .5em 0 .5em;
+    text-transform: capitalize;
+}
+
+
+
 footer {
+
+    display: flex;
+    align-items: center;
     height: 6rem;
     background: #333333;
+    color: #ffffffda;
+}
+
+footer p {
+    font-size: 1.2rem;
+}
+
+
+}
+
+@media (min-width: 480px) {
+    img {
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 650px) {
+    .logo {
+        width: 100px;
+    }
+    .title {
+        margin-top: -.6em;
+    }
+
+    .subtitle {
+        margin-top: -.2em;
+    }
+    h1 {
+        font-size: 2.4rem;
+    }
+    p{
+        font-size: 1.6rem;
+    }
+
+}
+
+@media (min-width: 900px) {
+    .logo {
+        width: 120px;
+    }
+
+    h1 {
+        font-size: 2.6rem;
+    }
+    p{
+        font-size: 1.6rem;
+    }
+
+    header {
+        margin: 0 auto;
+    }
+
+    .nav__item {
+        margin-right: 3.5em;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .container--coffee div {
+        order: 2;
+    }
+
+    .container--coffee img {
+        order: 1;
+    }
+
+    .container--testamonials {
+        flex-direction: column;
+    
+    }
+    .next-arrow-right {
+        top: 3.5rem;
+        right: -10rem;
+    }
+
+    .testamonial__item {
+        display: flex;
+        width: 600px;
+    }
+
+    .client-name {
+        text-align: left;
+        margin-left: -.2em;
+    }
+
+    .client-img {
+        align-self: center;
+    }
+
+
+    .testamonial__text:last-child{
+        margin-left: .2em;
+    }
+
+
+    .section {
+        margin: 5em 0 15em;
+    }
+
+    .section__title {
+        text-align: left;
+        margin-bottom: .2em;
+    }
+
+    .section__text {
+        padding: 0;
+        flex-basis: 60%;
+    }
+
+    .section__img {
+        width: 40%;
+        margin: 0;
+    }
+
+
 }
